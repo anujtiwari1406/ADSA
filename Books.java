@@ -5,7 +5,7 @@ public class Books {
         int n = sc.nextInt();
         int t = sc.nextInt();
         int[] arr = new int[n];
-        for(int i = 0; i < n; i++){
+        for(int  i = 0; i < n; i++){
             arr[i] = sc.nextInt();
 
         }
@@ -14,13 +14,13 @@ public class Books {
         int left = 0;
         int maxLen = 0;
 
-        for(int i = 0; i < n; i++){
-            sum += arr[i];
+        for(int right = 0; right < n; right++){
+            sum += arr[right];
             while(sum > t){
                 sum -= arr[left];
                 left++;
             }
-            maxLen = Math.max(maxLen , i - left + 1);
+            maxLen = Math.max(maxLen , right- left + 1);
 
 
         }
